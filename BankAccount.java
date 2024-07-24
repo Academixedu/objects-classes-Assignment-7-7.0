@@ -35,7 +35,7 @@ class BankAccount {
     public void withdraw(int amount){
         if(balance>=amount){
             balance=balance-amount;     
-            System.out.println(amount + " withdrawn\nCurrent balance: " + balance);
+            System.out.println(amount + " withdrawn. Current balance: " + balance);
           }
             else{
             System.out.println("Insufficient Balance:");
