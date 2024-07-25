@@ -6,13 +6,18 @@ class BankAccount {
         this.accountNumber = accountNumber;
         this.balance = initialBalance;
     }
+    public BankAccount(){
+        System.out.println(accountNumber);
+        System.out.println(balance);
+    }
 
     public void deposit(int amount)
     {
-        if(balance>=amount)
+        if(balance>=0)
         {
             balance=balance+amount;
-            System.out.println(amount + " deposited Current balance is: " + balance);
+            System.out.println("deposit "+amount);
+            System.out.println(" deposited after balance is: " + balance);
         }
         else{
             System.out.println("Invalid Deposit");
@@ -20,10 +25,11 @@ class BankAccount {
 
     }
     public void withdraw(int amount){
-        if(balance>=amount)
+        if(balance>=0)
         {
-            balance=balance-amount;     
-            System.out.println(amount + " withdraw Current balance is: " + balance);
+            balance=balance-amount;   
+            System.out.println("withdraw "+amount);  
+            System.out.println(" withdraw after Current balance is: " + balance);
         }
         else
         {
